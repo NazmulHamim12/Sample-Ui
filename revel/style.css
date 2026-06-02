@@ -1,0 +1,817 @@
+/* Base Styles & Fonts */
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #ffffff; /* White background vibe */
+    color: #333333;
+}
+
+/* Theme Colors */
+:root {
+    --theme-green: #00A859; /* Premium Green */
+    --theme-green-hover: #008f4c;
+    --text-dark: #1a1a1a;
+}
+
+
+
+
+
+.cta-button{
+    width: 140px;
+    
+    margin: auto;
+}
+
+.btn-cta{
+    font-size: 16px;
+    background-color:#00A859;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%); /* Subtle white-green gradient background */
+}
+
+/* Text Styles */
+.hero-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.text-theme {
+    color: var(--theme-green);
+    
+    font-weight: bold;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    color: #555555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Image Wrapper */
+.hero-image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain; /* Keeps the aspect ratio intact while filling the space */
+    border-radius: 15px; /* Optional: Looks good with UI */
+}
+
+/* Button Styles */
+.btn-order {
+    background-color: var(--theme-green);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 168, 89, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-order:hover {
+    background-color: var(--theme-green-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 168, 89, 0.4);
+}
+
+/* Cart Icon Bouncing Animation */
+.cart-icon {
+    font-size: 1.3rem;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+    
+    .hero-heading {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 1.05rem;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Features Section Styles
+========================================= */
+
+.features-section {
+    padding: 80px 0;
+    background-color: #fcfcfc; /* Very light subtle background to separate from hero */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+/* Custom Green Underline for Title */
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background-color: var(--theme-green);
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    height: 100%; /* Keeps cards equal height */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 168, 89, 0.05); /* Very subtle green border */
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 168, 89, 0.12); /* Green tinted shadow on hover */
+    border-color: rgba(0, 168, 89, 0.2);
+}
+
+/* Icon Styling */
+.feature-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 168, 89, 0.1); /* Light green circular background */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    background-color: var(--theme-green); /* Turns solid green on hover */
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--theme-green);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    color: #ffffff; /* Turns white on hover */
+}
+
+/* Card Typography */
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   Responsive Adjustments for Mobile
+========================================= */
+@media (max-width: 767px) {
+    .features-section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* Adjusting card for mobile to fit 2 in a row nicely */
+    .feature-card {
+        padding: 20px 10px;
+    }
+
+    .feature-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .feature-icon {
+        font-size: 1.4rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .feature-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+/* =========================================
+   Product Showcase Section
+========================================= */
+.product-showcase-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Image Gallery Styles */
+.product-gallery {
+    padding: 20px;
+    background: #fcfcfc;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+.main-image-wrapper {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+
+#mainProductImage {
+    max-height: 400px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.thumb-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thumb-img:hover {
+    border-color: rgba(0, 168, 89, 0.5);
+}
+
+.thumb-img.active-thumb {
+    border-color: var(--theme-green);
+    box-shadow: 0 4px 10px rgba(0, 168, 89, 0.2);
+}
+
+/* Product Details Card Styles */
+.product-details-card {
+    background: var(--theme-green);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border: 2px solid black;
+    color: white;
+    
+}
+
+.top-badge {
+    display: inline-block;
+    background-color: #fff4e5;
+    color: red;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 50px;
+    border: 1px solid #ffe0cc;
+}
+
+.product-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.product-short-desc {
+    font-size: 1.05rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.divider {
+    border-color: black;
+    margin: 20px 0;
+}
+
+/* Price Section */
+.current-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--theme-green);
+}
+
+.old-price {
+    font-size: 1.3rem;
+    color: #999999;
+    font-weight: 600;
+}
+
+.save-text {
+    display: inline-block;
+    background-color: #e6f6ec;
+    color: var(--theme-green);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.stock-status {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Info Lists */
+.info-list p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    font-size: 1.05rem;
+    color: white;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.stock-warning {
+    color: #dc3545; /* Bootstrap danger color */
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .product-details-card {
+        padding: 25px;
+    }
+    
+    .product-title {
+        font-size: 1.6rem;
+    }
+    
+    .current-price {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+/* =========================================
+   Review Section Styles (2 Items Everywhere)
+========================================= */
+.review-section {
+    padding: 80px 0;
+    background-color: #f7fdf9; /* Light subtle green-white vibe */
+}
+
+.review-sub-title {
+    color: var(--theme-green);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Custom padding to give space for arrows on both sides */
+.custom-carousel-padding {
+    padding: 0 55px;
+}
+
+/* Review Card Design */
+.review-card {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 168, 89, 0.06);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+}
+
+.review-img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    /* object-fit বাদ দিয়ে নিচের দুটি লাইন যোগ করো */
+    image-rendering: -webkit-optimize-contrast; /* ব্রাউজারে ইমেজ শার্প করার জন্য */
+    image-rendering: crisp-edges;
+}
+
+/* Custom Carousel Navigation Arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--theme-green);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 45%; 
+    box-shadow: 0 4px 10px rgba(0, 168, 89, 0.2);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--theme-green-hover);
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+    width: 45px;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+    width: 45px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 767px) {
+    .review-section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .custom-carousel-padding {
+        padding: 0 35px; /* Slightly less padding on mobile */
+    }
+    
+    .review-card {
+        padding: 5px; /* Minimum padding for mobile screen */
+        border-radius: 8px;
+    }
+
+    .review-img {
+        border-radius: 5px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .carousel-control-prev {
+        width: 30px;
+    }
+
+    .carousel-control-next {
+        width: 30px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .review-img {
+        /* এখানে ৪০০ পিক্সেল দেওয়া হয়েছে, তুমি চাইলে আরও ছোট (যেমন: 350px) করতে পারো */
+        max-width: 300px; 
+        max-height: 320px;
+        display: block;
+        margin: 0 auto; /* ইমেজটিকে কার্ডের মাঝখানে রাখবে */
+    }
+    
+    .review-card {
+        background: transparent; /* ব্যাকগ্রাউন্ড ট্রান্সপারেন্ট করলে দেখতে আরও প্রিমিয়াম লাগবে */
+        box-shadow: none; /* পিসিতে এক্সট্রা বড় বক্স শ্যাডো রিমুভ করবে */
+        border: none;
+    }
+}
+
+
+
+
+
+
+
+/* =========================================
+   FAQ Section Styles
+========================================= */
+.faq-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Accordion Custom Styling */
+.accordion-item {
+    border: 1px solid rgba(0, 168, 89, 0.1) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 18px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 168, 89, 0.08) !important;
+    color: var(--theme-green) !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0, 168, 89, 0.2);
+}
+
+.accordion-body {
+    font-size: 1.05rem;
+    color: #444444;
+    background-color: #ffffff;
+    line-height: 1.6;
+    padding: 18px 20px;
+    border-top: 1px solid rgba(0, 168, 89, 0.05);
+}
+
+/* Right Side Promo Card Styles */
+.faq-promo-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.promo-img-wrapper {
+    width: 100%;
+    height: 250px; /* নির্দিষ্ট হাইট দেওয়া হয়েছে ইমেজ ফিট করার জন্য */
+    overflow: hidden;
+    background-color: #fcfcfc;
+}
+
+.faq-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ইমেজ কেটে না গিয়ে সুন্দরভাবে ফিট হয়ে থাকবে */
+}
+
+.promo-text {
+    font-size: 1.1rem;
+    color: #555555;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Continuous Bouncing Animation for FAQ Button */
+.bounce-animation {
+    animation: buttonBounce 2s infinite ease-in-out;
+}
+
+@keyframes buttonBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .faq-section {
+        padding: 50px 0;
+    }
+    
+    .promo-img-wrapper {
+        height: 200px; /* মোবাইলে ইমেজ হাইট সামান্য কমানো */
+    }
+    
+    .accordion-button {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .accordion-body {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Checkout Section Styles
+========================================= */
+.checkout-section {
+    padding: 50px 0;
+    background-color: #00A859;
+}
+
+.checkout-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eeeeee;
+}
+
+.summary-card {
+    border: 2px solid rgba(0, 168, 89, 0.15);
+    background-color: #fcfdfd;
+}
+
+.checkout-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Custom Input Fields */
+.custom-input {
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: var(--theme-green);
+    box-shadow: 0 0 0 3px rgba(0, 168, 89, 0.15);
+}
+
+/* Shipping & Payment Radio Boxes Custom styling */
+.shipping-radio-box, .payment-radio-box {
+    padding: 15px 20px 15px 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.shipping-radio-box:hover, .payment-radio-box:hover {
+    border-color: rgba(0, 168, 89, 0.4);
+}
+
+.shipping-radio-box.active-radio, .payment-radio-box.active-radio {
+    border-color: var(--theme-green);
+    background-color: rgba(0, 168, 89, 0.03);
+}
+
+/* Product Row Styles */
+.checkout-prod-img-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.checkout-prod-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Quantity Controller */
+.qty-controller {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.qty-btn {
+    border: none;
+    background: none;
+    width: 28px;
+    height: 28px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #555555;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+.qty-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.qty-value {
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .checkout-section {
+        padding: 50px 0;
+    }
+    .checkout-card {
+        padding: 20px;
+    }
+    .shipping-radio-box, .payment-radio-box {
+        padding: 12px 15px 12px 35px;
+    }
+}
